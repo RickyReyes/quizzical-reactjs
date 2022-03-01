@@ -1,3 +1,10 @@
+$dark-blue: #293264; // text
+$very-light-blue: #D6DBF5;  // selected answer
+$green: #94D7A2; // correct answer
+$red: #F8BCBC;
+$bg-yellow: #FFFAD1;
+$bg-blue: #DEEBF8;
+
 *,
 *::before,
 *::after {
@@ -7,18 +14,11 @@
 
 body {
   width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   position: relative;
 }
-
 main {
   max-width: 800px;
 }
@@ -26,17 +26,10 @@ main {
 .app-container {
   width: 100%;
   font-family: Karla, sans-serif;
-  color: #293264;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  color: $dark-blue;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   min-height: 100vh;
   min-width: 400px;
   max-width: 800px;
@@ -48,7 +41,7 @@ main {
   position: absolute;
   width: 180px;
   height: 140px;
-  background-color: #DEEBF8;
+  background-color: $bg-blue;
   bottom: -8%;
   left: -15%;
   border-radius: 67% 33% 72% 28% / 22% 69% 31% 78%;
@@ -59,19 +52,16 @@ main {
   position: absolute;
   width: 200px;
   height: 100px;
-  background-color: #FFFAD1;
+  background-color: $bg-yellow;
   right: -10%;
   top: -6%;
   border-radius: 50% 50% 50% 50% / 50% 50% 60% 60%;
-  -webkit-transform: rotate(-128.49deg);
-          transform: rotate(-128.49deg);
+  transform: rotate(-128.49deg);
   z-index: -1;
 }
 
 .start-game {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   font-family: Inter;
   font-weight: normal;
   margin: 7px 0 10px;
@@ -82,7 +72,7 @@ main {
 }
 
 h1 {
-  text-align: center;
+  text-align: center
 }
 
 h2 {
@@ -93,14 +83,11 @@ h2 {
 
 .answers {
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: .5rem 1rem;
   padding-bottom: 15px;
   border-bottom: 0.794239px solid #DBDEF0;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .answer {
@@ -113,17 +100,11 @@ h2 {
 }
 
 .score-and-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   gap: 2rem;
-  margin-top: 1rem;
+  margin-top: 1rem
 }
 
 .btn {
@@ -137,4 +118,3 @@ h2 {
   padding: 10px 20px;
   cursor: pointer;
 }
-/*# sourceMappingURL=index.css.map */
