@@ -19,6 +19,8 @@ function replaceStringCodes(str) {
             .replace(new RegExp('&Eacute;', 'g'), 'É')
             .replace(new RegExp('&hellip;', 'g'), '…')
             .replace(new RegExp('&shy;', 'g'), '-')
+            .replace(new RegExp('&lrm;', 'g'), '→')
+            .replace(new RegExp('&aacute;', 'g'), 'á')
 }
 
 function App() {
@@ -37,7 +39,6 @@ function App() {
 
 
   function processData(data) {
-    console.log('ran')
     let newData = data.results.map((obj, idx) => {
       let size = data.results.length
       let randomIdx = Math.floor(Math.random() * (size + 1))
